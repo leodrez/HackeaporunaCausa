@@ -1,0 +1,29 @@
+.appointment-wrapper {
+  display: flex;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.appointment-day-section,
+.appointment-section {
+  padding: 15px;
+}
+
+.appointment-day-section {
+  flex: 0 0 100px;
+  padding-left: 15px;
+}
+
+.appointment-section {
+  flex: 1;
+}
+
+.appointment {
+  width: 100%;
+  background: blue;
+  margin: 5px 0;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+}
