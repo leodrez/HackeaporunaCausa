@@ -14,8 +14,8 @@ export default (store) => {
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <Route path="/profile" component={Profile}/>
-        <Route path="/institution" component={Institutions}/>
-        <Route path="/appointment" component={Appointments}/>
+        <Route path="/institutions" component={Institutions}/>
+        <Route path="/appointments" component={Appointments}/>
       </Route>
     </Router>
   );
