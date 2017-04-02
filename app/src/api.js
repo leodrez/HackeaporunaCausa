@@ -1,4 +1,4 @@
-const url = 'hhttps://hackeaporunacausa-vuqxxbowzc.now.sh';
+const url = 'hhttps://hackeaporunacausa-vuqxxbowzc.now.sh/mentors';
 import moment from 'moment';
 import faker from 'faker';
 const headers = new Headers({
