@@ -1,50 +1,43 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const mentor = new Schema( {
+const MentorSchema = new Schema({
   mentor_name: {
     type: String,
-    require: true
+    required: true
   },
-  mentor_lastname: {
+  mentor_last_name: {
     type: String,
-    require: true
+    required: true
   },
   birth_date: {
     type: Number,
-    require: true
+    required: true
   },
   gender: {
     type: String,
-    require: true
-  }
+    enum: ['m', 'f']
+  },
   address: {
     type: String,
-    require: true
+    required: true
   },
-  mobile_number: {
+  phone_number: {
     type: Number,
-    require: true
-  },
-  work_number: {
-    type: Number,
-    require: true
+    required: true
   },
   license_num: {
     type: Number,
-    require: true
+    required: true
   },
-  locations: {
-    type: [Object],
-    require: true
+  location: {
+    type: Array,
+    required: true
   },
-  type_mentoring: {
-    type: String,
-    require: true
-  },
-  interest: {
-    type: [Object],
-    require: true,
+  mentoring_type: {
+    type: Array,
+    required: true
   }
 })
-module.exports = mongoose.model(‘Mentors’, mentor)
+
+module.exports = mongoose.model('Mentor', MentorSchema)
