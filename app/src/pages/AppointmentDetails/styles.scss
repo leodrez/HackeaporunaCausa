@@ -1,0 +1,30 @@
+@import "../../style/colors";
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-header {
+  height: 150px;
+  background: $primaryColor;
+}
+
+.details-body {
+  flex: 1;
+}
+
+.details-description {
+
+}
+
+.details-icon {
+
+}
+
+.details-block {
+
+}
+
+.details-heading {
+
+}
