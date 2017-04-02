@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const MentorSchema = new Schema({
   mentor_name: {
@@ -37,7 +37,12 @@ const MentorSchema = new Schema({
   mentoring_type: {
     type: Array,
     required: true
-  }
-})
+  },
+  appointment: [{}]
+});
 
-module.exports = mongoose.model('Mentor', MentorSchema)
+module.exports = mongoose.model('Mentor', MentorSchema);
+
+
+
+
