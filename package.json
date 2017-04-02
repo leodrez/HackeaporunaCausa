@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-=======
     "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> 04ebbdcce0a3aee406edcaf3d8bb5b8a0658ba17
+
   },
   "repository": {
     "type": "git",

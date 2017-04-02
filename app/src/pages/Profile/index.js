@@ -11,7 +11,7 @@ const Profile = props => {
       <div className="name">
         <h1>{props.appState.mentor_name + ' ' + props.appState.mentor_last_name}</h1>
       </div>
-      <div className="title"><h3>Profesor Computadoras</h3></div>
+      <div className="title"><h3>Educador / Motivador / Coach</h3></div>
       <div className="bio"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
