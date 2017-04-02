@@ -9,7 +9,8 @@ const Profile = props => {
         <img className="photo" src="https://www.biography.com/.image/t_share/MTQ0ODc4NzUxMTE5ODQ1MTYy/neil_gorsuch_united_states_court_of_appeals_for_the_tenth_circuit_boston_herald_public_domain_via_wikimedia_commons_profile.jpg"/>
       </div>
       <div className="name">
-        <h1>{props.appState.mentor_name + ' ' + props.appState.mentor_last_name}</h1>
+        {/* <h1>{props.appState.mentor_name + ' ' + props.appState.mentor_last_name}</h1> */}
+        <h1>Ramon Gutierrez Algoran</h1>
       </div>
       <div className="title"><h3>Educador / Motivador / Coach</h3></div>
       <div className="bio"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,

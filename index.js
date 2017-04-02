@@ -17,12 +17,12 @@ if (process.env.NODE_ENV === 'production') {
 mongoose.connect(url, (err) => {
   if (err) console.log(`Connection to database failed, ${err}`)
 
-=======
-mongoose.connect('mongodb://localhost:27017/hackporunacausa', (err) => {
-  if (err) console.log(`Connection to database failed, ${err}`);
-
-  console.log(`Database connection established`)
-});
+// =======
+// mongoose.connect('mongodb://localhost:27017/hackporunacausa', (err) => {
+//   if (err) console.log(`Connection to database failed, ${err}`);
+//
+//   console.log(`Database connection established`)
+// });
 
 mongoose.Promise = global.Promise;
 
