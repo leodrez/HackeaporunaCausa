@@ -1,0 +1,46 @@
+.app-body {
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    height: 350px;
+}
+
+.image-header {
+    width: 100%;
+    height: 75%;
+}
+
+.photo {
+    position: relative;
+    top: -90px;
+    left: 0;
+    border-radius: 100px;
+    width: 170px;
+    border: 5px solid #FF4c1D;
+}
+
+.name {
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.bio {
+    position: relative;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact {
+    position: relative;
+    text-align: center;
+}
