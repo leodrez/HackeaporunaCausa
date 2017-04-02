@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../../components/Footer'
 import './styles.scss';
+import { getFirstUser } from '../../api';
 
 const Nav = props => {
   return (
@@ -10,13 +11,33 @@ const Nav = props => {
   );
 };
 
+const childrenWithProps = (
+  children,
+  props
+) => React.Children.map(children, (child) => React.cloneElement(child, { appState: props }));
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  componentWillMount() {
+    getFirstUser().then(data => {
+      if (!data) {
+        return;
+      }
+
+      this.setState({ ...data[0] });
+    });
+  }
+
   render() {
     return (
       <div className="app-wrapper">
-        <Nav/>
+        <Nav />
         <div className="app-body">
-          {this.props.children}
+          {childrenWithProps(this.props.children, this.state)}
         </div>
         <Footer/>
       </div>

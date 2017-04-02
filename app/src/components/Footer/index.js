@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <div className="app-footer">
       <FooterButton>
-        <Link to="/profile" className="footer-link">
-          <i className="fa fa-user" aria-hidden="true"></i>
+        <Link to="/institutions" className="footer-link">
+          <i className="fa fa-institution" aria-hidden="true"></i>
         </Link>
       </FooterButton>
       <FooterButton>
@@ -24,8 +24,8 @@ const Footer = () => {
         </Link>
       </FooterButton>
       <FooterButton>
-        <Link to="/institutions" className="footer-link">
-          <i className="fa fa-etsy" aria-hidden="true"></i>
+        <Link to="/profile" className="footer-link">
+          <i className="fa fa-user" aria-hidden="true"></i>
         </Link>
       </FooterButton>
     </div>

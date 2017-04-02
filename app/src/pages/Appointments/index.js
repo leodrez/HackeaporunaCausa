@@ -10,7 +10,7 @@ const AppointmentBlock = props => {
       onClick={() => push()}
     >
       <p>{props.details}</p>
-      <p className="from-to">{props.from} - {props.to}</p>
+      <p className="from-to">{props.date}</p>
     </div>
   );
 };
@@ -26,33 +26,39 @@ const DaySection = props => {
   )
 };
 
-const AppointmentSection = props => {
-  return (
-    <div className="appointment-section">
-      {props.children}
-    </div>
-  );
-};
+const Appointment = ({ push, appState, day, number }) => {
+  const appointmentBlocks = (appointments) => {
+    return appointments.map(appointment => {
+      return (<AppointmentBlock
+        key={appointment.date}
+        push={push}
+        details="Pick up john at 10pm"
+        date={appointment.date}
+      />)
+    })
+  };
 
-const Appointment = ({ push }) => {
   return (
     <div className="appointment-wrapper">
-      <DaySection day="Monday" number="31"/>
-      <AppointmentSection>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
-      </AppointmentSection>
+      <DaySection day={day} number={number}/>
+      <div className="appointment-section">
+        {appState && appState.appointment && appointmentBlocks(appState.appointment)}
+      </div>
     </div>
   );
 };
 
 const Appointments = props => {
-  console.log('props', props);
   const push = (to = '/appointment-details/10') => props.router.push(to);
   return (
     <div>
-      <Appointment push={push}/>
+      <Appointment push={push} day="Monday" number={1} {...props}/>
+      <Appointment push={push} day="Wednesday" number={4} {...props}/>
+      <Appointment push={push} day="Sunday" number={6} {...props}/>
+
+      <Appointment push={push} day="Monday" number={8} {...props}/>
+      <Appointment push={push} day="Wednesday" number={10} {...props}/>
+      <Appointment push={push} day="Sunday" number={26} {...props}/>
     </div>
   );
 };
