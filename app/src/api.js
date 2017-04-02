@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'hhttps://hackeaporunacausa-vuqxxbowzc.now.sh';
 import moment from 'moment';
 import faker from 'faker';
 const headers = new Headers({
