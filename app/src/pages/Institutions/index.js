@@ -7,22 +7,50 @@ const Institution = () => {
     <div>
       <div id = "list">
           <CardStack
-            height={250}
+            height= "1250"
             width = "100%"
             background='#f8f8f8'
             hoverOffset={25}>
 
             <Card background='#2980B9'>
               <h1>Institución1</h1>
+              <h4 style={{fontSize: 18,textAlign: 'right',marginLeft: 1}}>About Us</h4>
             </Card>
 
             <Card background='#27AE60'>
               <h1>Institución2</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
             </Card>
             
-            <Card background='#FF4c1D'>
-              <h1>Institución3</h1>
+            <Card background='orange'>
+              <h1>Institución 3</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
             </Card>
+
+            <Card background='red'>
+              <h1>Institución 4</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
+            </Card>
+
+            <Card background='#2980B9'>
+              <h1>Institución 5</h1>
+              <h4 style={{fontSize: 18,textAlign: 'right',marginLeft: 1}}>About Us</h4>
+            </Card>
+
+            <Card background='#27AE60'>
+              <h1>Institución 6</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
+            </Card>
+            
+            <Card background='orange'>
+              <h1>Institución 7</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
+            </Card>
+
+            <Card background='red'>
+              <h1>Institución 8</h1>
+               <h4 style={{fontSize: 18, textAlign: 'right',marginLeft: 1}}>About Us</h4>
+            </Card>        
         </CardStack>
     </div>
   </div>
