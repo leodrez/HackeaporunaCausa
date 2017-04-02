@@ -1,5 +1,9 @@
 @import "../../style/colors";
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -29,6 +33,7 @@ h6 {
   display: flex;
   height: 100vh;
   flex-direction: column;
+  min-width: 340px;
 }
 
 .app-header {

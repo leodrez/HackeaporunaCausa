@@ -1,11 +1,13 @@
 import React from 'react';
 import './styles.scss';
+import { withRouter } from 'react-router';
 
 const AppointmentBlock = props => {
+  const push = props.push;
   return (
     <div
       className="appointment"
-      onClick={() => alert('clicked')}
+      onClick={() => push()}
     >
       <p>{props.details}</p>
       <p className="from-to">{props.from} - {props.to}</p>
@@ -32,33 +34,27 @@ const AppointmentSection = props => {
   );
 };
 
-const Appointment = props => {
+const Appointment = ({ push }) => {
   return (
     <div className="appointment-wrapper">
       <DaySection day="Monday" number="31"/>
       <AppointmentSection>
-        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
+        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
+        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
+        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
       </AppointmentSection>
     </div>
   );
 };
 
-const Appointments = () => {
+const Appointments = props => {
+  console.log('props', props);
+  const push = (to = '/appointment-details/10') => props.router.push(to);
   return (
     <div>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
-      <Appointment/>
+      <Appointment push={push}/>
     </div>
   );
 };
 
-export default Appointments;
+export default withRouter(Appointments);
