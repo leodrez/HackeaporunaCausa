@@ -1,0 +1,35 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+.header1 {
+  padding-top: 40px;
+  padding-left: 25px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.header2 {
+  padding-right: 10px;
+}
+
+#list {
+  color: #fff;
+  position: relative;
+}
+
+.card-header-details .icon::before {
+  position: relative;
+  right: 7px;
+  top: 1px;
+}
+
+.institucion-text {
+  padding: 40px 20px 20px 20px;
+  line-height: 1.2;
+}
+
+.institution-image {
+  margin: 0 auto;
+  display: block;
+  width: 75%;
+}

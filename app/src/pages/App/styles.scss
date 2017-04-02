@@ -1,0 +1,76 @@
+@import "../../style/colors";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.app-wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  min-width: 340px;
+}
+
+.app-header {
+  height: 50px;
+  background: $primaryColor;
+}
+
+.app-body {
+  flex: 1;
+  background: #fff;
+  overflow-y: scroll;
+}
+
+.app-footer {
+  height: 50px;
+  background: $primaryColor;
+}
+
+/* footer */
+.app-footer {
+  display: flex;
+}
+
+.footer-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.footer-link {
+  color: #fff;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

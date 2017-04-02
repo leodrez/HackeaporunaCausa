@@ -1,0 +1,79 @@
+@import "../../style/colors";
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.details-header {
+  min-height: 100px;
+  background: #1370cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+  padding: 0 45px;
+}
+
+.details-body {
+  flex: 1;
+}
+
+.details-block {
+  display: flex;
+  min-height: 50px;
+  padding: 10px 15px;
+}
+
+.details-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50px;
+  color: $textColor;
+}
+
+.detail-text {
+  padding: 5px 0;
+}
+
+.details-icon-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.close-icon,
+.settings-icon {
+  display: flex;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.close-icon {
+  flex: 1;
+  font-weight: 100;
+  font-family: roboto;
+  position: relative;
+  top: 14px;
+  left: -25px;
+}
+
+.settings-icon {
+  flex: 1;
+  position: relative;
+  top: 5px;
+  right: -25px;
+  justify-content: flex-end;
+}
+

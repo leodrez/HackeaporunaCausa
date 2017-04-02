@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
@@ -19,8 +24,14 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "material-ui": "0.17.1",
     "mongoose": "^4.9.2",
-    "react-router": "4.0.0"
+    "react-router": "4.0.0",
+    "react-tap-event-plugin": "2.0.1"
+  },
+  "devDependencies": {
+    "cors": "2.8.3",
+    "nodemon": "1.11.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }
