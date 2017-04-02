@@ -38,6 +38,7 @@ module.exports = {
         test: /\.jpg$/,
         loader: 'file-loader',
       },
+
     ],
   },
   resolve: {

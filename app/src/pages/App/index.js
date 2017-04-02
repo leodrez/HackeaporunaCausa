@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Footer from '../../components/Footer'
 import './styles.scss';
 import { getFirstUser } from '../../api';
+
 const Nav = props => {
   return (
     <div className="app-header">
@@ -34,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="app-wrapper">
-        <Nav/>
+        <Nav />
         <div className="app-body">
           {childrenWithProps(this.props.children, this.state)}
         </div>
