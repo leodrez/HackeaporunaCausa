@@ -12,7 +12,7 @@ const Institution = () => {
         background='#f8f8f8'
         hoverOffset={25}>
 
-        <Card background='#2980B9'>
+        <Card background='#ff4c1d'>
           <h1 className="header1">
             Institución 1
           </h1>
