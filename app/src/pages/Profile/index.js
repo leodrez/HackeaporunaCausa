@@ -1,14 +1,16 @@
 import React from 'react';
 import './styles.scss';
+
 const Profile = props => {
-  console.log('profile props', props);
   return (
     <div>
       <div className="header">
         <img className="image-header" src="http://facet-foundation.org/site/wp-content/uploads/2015/10/charity-featured-lesotho.jpg"/>
-        <img className="photo" src="http://lavincenter.sdsu.edu/images/profile-images/square_profile_pic_male.png"/>
+        <img className="photo" src="https://www.biography.com/.image/t_share/MTQ0ODc4NzUxMTE5ODQ1MTYy/neil_gorsuch_united_states_court_of_appeals_for_the_tenth_circuit_boston_herald_public_domain_via_wikimedia_commons_profile.jpg"/>
       </div>
-      <div className="name"><h1>{props.appState.mentor_name + ' ' + props.appState.mentor_last_name}</h1></div>
+      <div className="name">
+        <h1>{props.appState.mentor_name + ' ' + props.appState.mentor_last_name}</h1>
+      </div>
       <div className="title"><h3>Profesor Computadoras</h3></div>
       <div className="bio"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

@@ -10,7 +10,7 @@ const AppointmentBlock = props => {
       onClick={() => push()}
     >
       <p>{props.details}</p>
-      <p className="from-to">{props.from} - {props.to}</p>
+      <p className="from-to">{props.date}</p>
     </div>
   );
 };
@@ -34,25 +34,39 @@ const AppointmentSection = props => {
   );
 };
 
-const Appointment = ({ push }) => {
+const Appointment = ({ push, appState }) => {
+  const appointments = () => {
+    return appState.appointment.map(item => {
+      return (
+        <AppointmentBlock
+          key={item.date}
+          push={push}
+          details="Pick up john at 10pm"
+          date={item.date}
+        />
+      );
+    });
+  };
+
   return (
     <div className="appointment-wrapper">
       <DaySection day="Monday" number="31"/>
       <AppointmentSection>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
-        <AppointmentBlock push={push} details="Pick up john at 10pm" from="10am" to="12am"/>
+        {appState && appState.appointment && appointments()}
       </AppointmentSection>
     </div>
   );
 };
 
 const Appointments = props => {
-  console.log('props', props);
+  const appState = props.appState;
   const push = (to = '/appointment-details/10') => props.router.push(to);
   return (
     <div>
-      <Appointment push={push}/>
+      <Appointment
+        push={push}
+        appState={appState}
+      />
     </div>
   );
 };
