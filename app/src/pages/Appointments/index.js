@@ -26,8 +26,7 @@ const DaySection = props => {
   )
 };
 
-const Appointment = ({ push, appState }) => {
-  console.log('appState', appState);
+const Appointment = ({ push, appState, day, number }) => {
   const appointmentBlocks = (appointments) => {
     return appointments.map(appointment => {
       return (<AppointmentBlock
@@ -41,7 +40,7 @@ const Appointment = ({ push, appState }) => {
 
   return (
     <div className="appointment-wrapper">
-      <DaySection day="Monday" number="31"/>
+      <DaySection day={day} number={number}/>
       <div className="appointment-section">
         {appState && appState.appointment && appointmentBlocks(appState.appointment)}
       </div>
@@ -50,11 +49,16 @@ const Appointment = ({ push, appState }) => {
 };
 
 const Appointments = props => {
-  const appState = props.appState;
   const push = (to = '/appointment-details/10') => props.router.push(to);
   return (
     <div>
-      <Appointment push={push} {...props}/>
+      <Appointment push={push} day="Monday" number={1} {...props}/>
+      <Appointment push={push} day="Wednesday" number={4} {...props}/>
+      <Appointment push={push} day="Sunday" number={6} {...props}/>
+
+      <Appointment push={push} day="Monday" number={8} {...props}/>
+      <Appointment push={push} day="Wednesday" number={10} {...props}/>
+      <Appointment push={push} day="Sunday" number={26} {...props}/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router, browserHistory, IndexRoute } from 'react-router';
+import { Route, Router, browserHistory } from 'react-router';
 import App from './pages/App';
 import Appointments from './pages/Appointments';
 import AppointmentDetails from './pages/AppointmentDetails';
