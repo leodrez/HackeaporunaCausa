@@ -6,17 +6,17 @@
 
 .header {
     text-align: center;
-    height: 350px;
+    height: 400px;
 }
 
 .image-header {
     width: 100%;
-    height: 75%;
+    height: 60%;
 }
 
 .photo {
     position: relative;
-    top: -90px;
+    top: -80px;
     left: 0;
     border-radius: 100px;
     width: 170px;
@@ -26,11 +26,14 @@
 .name {
     position: relative;
     text-align: center;
+    margin-top: -60px;
 }
 
 .title {
     position: relative;
     text-align: center;
+    font-style: italic;
+    color: #1370CC;
 }
 
 .bio {
