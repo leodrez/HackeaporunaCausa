@@ -14,7 +14,8 @@ const DaySection = props => {
   return (
     <div className="appointment-day-section">
       <div className="day">
-        {props.day}
+        <h4 className="date">{props.day}</h4>
+        <h4 className="date">{props.number}</h4>
       </div>
     </div>
   )
@@ -31,15 +32,9 @@ const AppointmentSection = props => {
 const Appointment = props => {
   return (
     <div className="appointment-wrapper">
-      <DaySection day="Monday"/>
+      <DaySection day="Monday" number="31"/>
       <AppointmentSection>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
-        <AppointmentBlock details="Pick up john at 10pm" date="jan 31, 2018"/>
+        <AppointmentBlock details="Pick up john at 10pm"/>
       </AppointmentSection>
     </div>
   );
@@ -48,7 +43,6 @@ const Appointment = props => {
 const Appointments = () => {
   return (
     <div>
-      <h2>Appointments</h2>
       <Appointment/>
       <Appointment/>
       <Appointment/>
