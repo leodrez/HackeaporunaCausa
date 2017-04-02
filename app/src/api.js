@@ -30,7 +30,7 @@ export const insertUser = () => {
       appointment: [{
         mentee: faker.name.firstName(),
         date: moment().add(1, 'days').calendar(),
-        time: '4PM'
+        time: '4:00pm'
       }]
     })
   }).then(res => {
