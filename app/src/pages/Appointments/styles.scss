@@ -32,16 +32,22 @@ $date-color: rgb(91, 91, 91);
   font-size: 15px;
 }
 
+.from-to {
+  margin-top: 4px;
+}
+
 .appointment-section {
   flex: 1;
 }
 
 .appointment {
   width: 100%;
-  background: $secondaryColor;
-  margin: 5px 0;
+  background: #ff4c1d;
+  margin: 2px 0;
   border-radius: 3px;
-  padding: 10px 5px;
+  padding: 5px;
   color: #fff;
   font-size: 13px;
+  box-shadow: 0 0 5px #777;
+  border-bottom: 1px solid #999;
 }

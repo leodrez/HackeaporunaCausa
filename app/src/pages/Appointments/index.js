@@ -3,9 +3,12 @@ import './styles.scss';
 
 const AppointmentBlock = props => {
   return (
-    <div className="appointment">
+    <div
+      className="appointment"
+      onClick={() => alert('clicked')}
+    >
       <p>{props.details}</p>
-      <p>{props.date}</p>
+      <p className="from-to">{props.from} - {props.to}</p>
     </div>
   );
 };
@@ -34,7 +37,9 @@ const Appointment = props => {
     <div className="appointment-wrapper">
       <DaySection day="Monday" number="31"/>
       <AppointmentSection>
-        <AppointmentBlock details="Pick up john at 10pm"/>
+        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
+        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
+        <AppointmentBlock details="Pick up john at 10pm" from="10am" to="12am"/>
       </AppointmentSection>
     </div>
   );
